@@ -4,8 +4,12 @@
  */
 package servlets;
 
+import com.standard.biblioteca.config.Conexao_DB;
+import com.standard.biblioteca.dao.UtilizadorDAO;
+import com.standard.biblioteca.entidades.Utilizador;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Objects;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -62,17 +66,48 @@ public class LoginServlet extends HttpServlet{
         response.setContentType("text/html;charset=UTF-8");
         
         
+        String operacao = request.getParameter("operacao");
         nome = request.getParameter("username");
         senha = request.getParameter("senha");
+        String email = request.getParameter("email");
         
         
          System.out.println("Nome: " +  nome);
          System.out.println("Senha: " + senha);
+         System.out.println("email: " + email);
+         System.out.println("operacao: " + operacao);
+         
+         if(operacao.equals("criar_conta")){
+
+            UtilizadorDAO dao = new UtilizadorDAO();
+            
+            Utilizador user = new Utilizador(nome, senha, email);
+            
+            if(!Objects.equals(dao.getConexao(), null)){
+
+                if(dao.create(user) == 1){
+                    
+                    System.out.println("utilizador registado com sucesso");
+                }
+                else
+                {
+                    System.err.println("Não foi possivel registar o utilizador");
+                }
+            }
+            else
+            {
+                System.err.println("Erro: Não foi possivel estabelecer a conexao!!!");
+            }
+         }
+         
+        
+         
          
          
          //HttpSession session;
          if(senha.equals("julio186")){
             
+             
             response.sendRedirect( "home.jsp" );
             
          }
@@ -84,20 +119,6 @@ public class LoginServlet extends HttpServlet{
            request.setAttribute("mensagemErro", mensagem);
            response.sendRedirect( "index.jsp" );
          }
-        
-        
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Olá " + nome + " seja bemvindo ao STANDARD BANK</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

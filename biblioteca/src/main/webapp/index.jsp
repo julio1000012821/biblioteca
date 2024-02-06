@@ -25,7 +25,12 @@
                     <label>senha   </label>
                     <input type="password" name="senha" placeholder="insere a password" />
                 </div>
+                <input type="hidden" name="operacao" value="login" />
+
                 <button type="submit" >Entrar</button>
+                <div style="margin-bottom: 30px;"></div>
+                <a href="criar_conta.jsp" >Criar conta</a>
+                
             </form>
         </div>
             <div>

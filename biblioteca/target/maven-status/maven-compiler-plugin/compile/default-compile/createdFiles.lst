@@ -1,3 +1,6 @@
+com/standard/biblioteca/entidades/Utilizador.class
+com/standard/biblioteca/config/Conexao_DB.class
 servlets/LoginServlet.class
 com/standard/biblioteca/resources/JavaEE8Resource.class
+com/standard/biblioteca/dao/UtilizadorDAO.class
 com/standard/biblioteca/JAXRSConfiguration.class

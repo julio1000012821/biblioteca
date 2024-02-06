@@ -1,3 +1,6 @@
-/Users/juliosilva/Documents/SOFTWARES_DESITEC/biblioteca/src/main/java/servlets/LoginServlet.java
-/Users/juliosilva/Documents/SOFTWARES_DESITEC/biblioteca/src/main/java/com/standard/biblioteca/JAXRSConfiguration.java
-/Users/juliosilva/Documents/SOFTWARES_DESITEC/biblioteca/src/main/java/com/standard/biblioteca/resources/JavaEE8Resource.java
+/Users/juliosilva/Documents/projecto_biblioteca/biblioteca/biblioteca/src/main/java/com/standard/biblioteca/config/Conexao_DB.java
+/Users/juliosilva/Documents/projecto_biblioteca/biblioteca/biblioteca/src/main/java/servlets/LoginServlet.java
+/Users/juliosilva/Documents/projecto_biblioteca/biblioteca/biblioteca/src/main/java/com/standard/biblioteca/resources/JavaEE8Resource.java
+/Users/juliosilva/Documents/projecto_biblioteca/biblioteca/biblioteca/src/main/java/com/standard/biblioteca/entidades/Utilizador.java
+/Users/juliosilva/Documents/projecto_biblioteca/biblioteca/biblioteca/src/main/java/com/standard/biblioteca/dao/UtilizadorDAO.java
+/Users/juliosilva/Documents/projecto_biblioteca/biblioteca/biblioteca/src/main/java/com/standard/biblioteca/JAXRSConfiguration.java
