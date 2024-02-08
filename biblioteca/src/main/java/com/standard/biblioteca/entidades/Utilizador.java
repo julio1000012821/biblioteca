@@ -12,6 +12,7 @@ import java.io.Serializable;
  */
 public class Utilizador implements Serializable{
     
+   private static final long serialVersionUID = 1L;
    private int idUtilizador;
    private String nome;
    private String senha;
@@ -58,8 +59,9 @@ public class Utilizador implements Serializable{
     public void setEmail(String email) {
         this.email = email;
     }
-   
-     
-   
-   
+
+    @Override
+    public String toString() {
+        return "Utilizador{" + "nome=" + nome + ", senha=" + senha + '}';
+    }
 }

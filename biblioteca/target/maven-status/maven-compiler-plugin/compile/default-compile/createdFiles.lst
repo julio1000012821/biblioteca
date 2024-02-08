@@ -1,6 +1,10 @@
 com/standard/biblioteca/entidades/Utilizador.class
+managedbeans/LoginBean.class
+managedbeans/UtilizadorBean.class
 com/standard/biblioteca/config/Conexao_DB.class
+com/standard/biblioteca/config/Api.class
 servlets/LoginServlet.class
 com/standard/biblioteca/resources/JavaEE8Resource.class
 com/standard/biblioteca/dao/UtilizadorDAO.class
 com/standard/biblioteca/JAXRSConfiguration.class
+managedbeans/UtilizadorBean$1.class
